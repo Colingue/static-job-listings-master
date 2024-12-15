@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "League Spartan";
+  background-color: hsl(180, 52%, 96%);
+}
+
+button {
+  outline: none;
+  border: none;
+  font-family: "League Spartan";
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#image-background {
+  background-color: hsl(180, 29%, 50%);
+}
+
+.img-mobile {
+  display: block;
+  width: 100%;
+}
+
+.img-desktop {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.featured {
+  border-left: 4px solid hsl(180, 29%, 50%);
+}
+
+#job-filters {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  top: 100px;
+  width: calc(100% - 80px);
+  border-radius: 6px;
+}
+
+.reset-all-filters {
+  background: none;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+}
+
+.reset-all-filters:hover {
+  text-decoration: underline;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-tag {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.filter-tag span {
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  padding: 10px;
+  font-weight: 700;
+}
+
+.filter-tag button {
+  width: 34px;
+  background-color: hsl(180, 29%, 50%);
+  font-size: xx-large;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+#job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: hsl(180, 52%, 96%);
+}
+
+#job-list article {
+  background-color: white;
+  padding: 24px;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 4px 9px 28px 1px rgba(173, 209, 209, 0.566);
+}
+
+#job-list img {
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+#job-list .company {
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#job-list h2 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.category-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.category-list button {
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.category-list button:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.remove-filter:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.job-news {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 8px;
+}
+
+.job-news .tag-section {
+  display: flex;
+  gap: 10px;
+}
+
+.tag-section div {
+  color: white;
+  padding: 6px 8px 4px;
+  margin: 0;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-badge {
+  background-color: hsl(180, 29%, 50%);
+}
+
+.featured-badge {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.tag-section div p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.infos {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: hsl(180, 8%, 52%);
+}
+
+.divider {
+  width: 100%;
+  border-top: 1px solid rgb(190, 190, 190);
+  margin: 4px 0 20px 0;
+}
+
+@media (min-width: 768px) {
+  .img-mobile {
+    display: none;
+  }
+
+  .img-desktop {
+    display: block;
+  }
+
+  .job-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  #job-filters {
+    max-width: calc(1110px - 40px);
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #job-list {
+    max-width: 1110px;
+    margin: auto;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  #job-list h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  #job-list h2:hover {
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+  }
+
+  #job-list img {
+    position: static;
+    height: 90px;
+    width: 90px;
+  }
+
+  #job-list article {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}
